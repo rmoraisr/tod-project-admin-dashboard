@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-align: center; /* debug purpose */
+}
+
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 2fr 5fr 0.5fr;
+}
+
+.header {
+    background-color: peachpuff; /* debug purpose */
+    grid-column: 2 / 3;
+}
+
+.sidenav {
+    background-color: lightblue; /* debug purpose */
+    grid-row: 1 / -1;
+}
+
+.content {
+    background-color: lightgray; /* debug purpose */
+    grid-column: 2 / 3;
+}
+
+.footer {
+    background-color: gray; /* debug purpose */
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+}
