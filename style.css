@@ -18,7 +18,6 @@ html {
 
 :root {
     --color: #6c63ff;
-    --outside-padding: 10px
 }
 
 /* Grid Container */
@@ -27,6 +26,10 @@ html {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 2fr 5fr 0.5fr;
+}
+
+.grid-container > * {
+    padding: 10px;
 }
 
 /* Header */
@@ -41,7 +44,6 @@ html {
     grid-row: 1 / -1;
     display: flex;
     flex-direction: column;
-    padding: var(--outside-padding);
 }
 
 .sidenav-logo {
@@ -62,16 +64,19 @@ html {
     margin-bottom: 2rem;
 }
 
-.sidenav-menu > li, .sidenav-menu2 > li{
+.sidenav-menu > li,
+.sidenav-menu2 > li {
     display: flex;
     gap: 0.5rem;
     color: var(--color);
     align-items: center;
+    margin-top: 0.3rem;
 }
 
-.sidenav-menu > li > img, .sidenav-menu2 > li > img {
+.sidenav-menu > li > img,
+.sidenav-menu2 > li > img {
     height: auto;
-    width: 1.5rem;
+    width: 1.2rem;
 }
 
 /* Main Content */
