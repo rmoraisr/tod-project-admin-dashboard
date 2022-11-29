@@ -1,3 +1,4 @@
+/* Custom Reset CSS */
 *,
 *::before,
 *::after {
@@ -7,9 +8,19 @@
 * {
     margin: 0;
     padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: Roboto, serif;
     text-align: center; /* debug purpose */
 }
 
+:root {
+    --color: #6c63ff;
+}
+
+/* Grid Container */
 .grid-container {
     height: 100vh;
     display: grid;
@@ -17,21 +28,50 @@
     grid-template-rows: 2fr 5fr 0.5fr;
 }
 
+/* Header */
 .header {
     background-color: peachpuff; /* debug purpose */
     grid-column: 2 / 3;
 }
 
+/* Sidenav */
 .sidenav {
     background-color: lightblue; /* debug purpose */
     grid-row: 1 / -1;
 }
 
+.sidenav-logo {
+    display: flex;
+}
+
+.sidenav-logo > img {
+    height: auto;
+    width: 2rem;
+}
+
+.sidenav-logo > h1 {
+    color: var(--color);
+}
+
+.sidenav-menu > li, .sidenav-menu2 > li{
+    display: flex;
+    gap: 0.5rem;
+    color: var(--color);
+    align-items: center;
+}
+
+.sidenav-menu > li > img, .sidenav-menu2 > li > img {
+    height: auto;
+    width: 1.5rem;
+}
+
+/* Main Content */
 .content {
     background-color: lightgray; /* debug purpose */
     grid-column: 2 / 3;
 }
 
+/* Footer */
 .footer {
     background-color: gray; /* debug purpose */
     grid-column: 2 / 3;
