@@ -54,15 +54,15 @@ html {
     grid-area: sidebar;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
+    grid-template-rows: 0.5fr 0.8fr 1fr;
     grid-template-areas: 'sidebar-title' 'menu-items' 'menu-settings';
 }
 
 .sidebar-title {
     grid-area: sidebar-title;
     display: flex;
-    align-items: center;
-    /* padding: 10px 20px; */
+    align-items: start;
+    padding-top: 15px;
 }
 .logo {
     height: auto;
@@ -77,6 +77,8 @@ html {
 
 .menu-items {
     grid-area: menu-items;
+    align-content: end;
+
 }
 
 .menu-settings {
