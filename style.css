@@ -93,7 +93,6 @@ html {
     align-items: center;
     align-content: space-between;
     color: var(--color);
-
 }
 
 /* Header */
@@ -109,4 +108,10 @@ html {
 .footer {
     grid-area: footer;
     background-color: var(--main);
+}
+
+/* Hoover effect on clickable items */
+
+.menu > li:hover {
+    transform: scale(1.08);
 }
