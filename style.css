@@ -106,16 +106,51 @@ html {
     margin-right: 80px;
 }
 
-.header-search {
+.header-search,
+.header-profile {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.search-bar {
+    width: clamp(60px, 50vw, 800px);
+    height: 25px;
+    background-color: var(--main);
+    border: none;
+    border-radius: 15px;
+    padding-left: 10px;
+    font-size: 12px;
 }
 
 .notification {
     margin-left: auto;
 }
 
+.header-buttons {
+    margin-left: auto;
+    display: flex;
+    gap: 10px;
+}
+
+.name-greeting,
+.author {
+    text-align: start;
+    font-size: 0.7rem;
+}
+
+.btn {
+    border-radius: 15px;
+    width: 75px;
+    height: 25px;
+    font-size: 11px;
+    font-weight: 500;
+    background-color: var(--sidebar);
+    color: var(--color);
+    border: none;
+}
+
+/* Main Content */
 .content {
     background-color: var(--main);
     grid-area: content;
@@ -142,4 +177,9 @@ html {
 .avatar.small {
     height: auto;
     width: 40px;
+}
+
+.avatar.large {
+    height: auto;
+    width: 60px;
 }
