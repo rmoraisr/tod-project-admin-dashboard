@@ -255,12 +255,15 @@ html {
     box-shadow: 8px 8px 16px #b3b4bd, -8px -8px 16px #ffffff;
     border-left: solid 5px var(--color);
     gap: 10px;
+    padding-top: 20px;
+
 }
 
 .trend {
     display: flex;
     justify-content: flex-start;
     gap: 10px;
+    margin-left: 10px;
 
 }
 
