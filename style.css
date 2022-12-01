@@ -176,7 +176,8 @@ html {
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-auto-rows: 200px;
+    grid-auto-rows: clamp(200px, min-content, 400px);
+    overflow: auto;
     gap: 2rem;
     padding-bottom: 2rem;
 }
@@ -196,7 +197,9 @@ html {
     color: var(--card-text);
 }
 
-.card-title, .card-text, .section-title{
+.card-title,
+.card-text,
+.section-title {
     text-align: left;
 }
 
@@ -206,15 +209,37 @@ html {
     display: flex;
     justify-content: flex-end;
     gap: 10px;
-  }
+}
 
-  .actions > span {
+.actions > span {
     font-size: 1.2rem;
-  }
+}
 
-  .actions > span:hover {
+.actions > span:hover {
     transform: scale(1.5);
-  }
+}
+
+.announcements {
+    grid-area: announcements;
+    margin-left: 20px;
+}
+
+.announcement {
+    width: 25ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-bottom: 2px solid var(--main);
+    list-style-type: none;
+    padding: 1rem 0;
+}
+
+.announcement:first-child {
+    padding-top: 0;
+}
+
+.announcement > p {
+    font-size: 0.7rem;
+}
 
 /* Footer */
 .footer {
