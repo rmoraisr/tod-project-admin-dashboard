@@ -28,6 +28,7 @@ html {
     --sidebar: #d3d5f5;
     --main: #e9eaf6;
     --general: #fff;
+    --card-text: #78716c;
 }
 
 /* Main Grid Layout */
@@ -154,8 +155,50 @@ html {
 .content {
     background-color: var(--main);
     grid-area: content;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: min-content 1fr;
+    grid-template-areas:
+        'projects announcements'
+        'projects trending';
+    overflow: auto;
 }
 
+.section-title {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+}
+
+.projects {
+    grid-area: projects;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 200px;
+    gap: 2rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 7px;
+    box-shadow: 8px 8px 16px #b3b4bd, -8px -8px 16px #ffffff;
+    border-left: solid 5px var(--color);
+}
+
+.card-text {
+    margin-top: 8px;
+    color: var(--card-text);
+}
+
+.card-title, .card-text, .section-title{
+    text-align: left;
+}
+
+/* Footer */
 .footer {
     grid-area: footer;
     background-color: var(--main);
