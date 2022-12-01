@@ -187,6 +187,8 @@ html {
     border-radius: 7px;
     box-shadow: 8px 8px 16px #b3b4bd, -8px -8px 16px #ffffff;
     border-left: solid 5px var(--color);
+    display: flex;
+    flex-direction: column;
 }
 
 .card-text {
@@ -197,6 +199,22 @@ html {
 .card-title, .card-text, .section-title{
     text-align: left;
 }
+
+.actions {
+    margin-top: auto;
+    color: var(--card-text);
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+
+  .actions > span {
+    font-size: 1.2rem;
+  }
+
+  .actions > span:hover {
+    transform: scale(1.5);
+  }
 
 /* Footer */
 .footer {
